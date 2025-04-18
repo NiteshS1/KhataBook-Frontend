@@ -1,0 +1,202 @@
+.dashboard {
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.dashboard h1 {
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Summary Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .summary-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.summary-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.summary-card.transactions::before {
+  background-color: #10b981;
+}
+
+.summary-card.amount::before {
+  background-color: #8b5cf6;
+}
+
+.summary-card.paid::before {
+  background-color: #22c55e;
+}
+
+.summary-card.unpaid::before {
+  background-color: #ef4444;
+}
+
+.summary-card h3 {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.summary-card p {
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Recent Transactions Section */
+.transactions-container {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.transactions-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.transactions-header h2 {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Download Buttons */
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.download-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.download-btn.pdf {
+  background-color: #ef4444;
+  color: white;
+}
+
+.download-btn.pdf:hover {
+  background-color: #dc2626;
+}
+
+.download-btn.excel {
+  background-color: #10b981;
+  color: white;
+}
+
+.download-btn.excel:hover {
+  background-color: #059669;
+}
+
+/* Table Styles */
+.transactions-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.transactions-table th {
+  background-color: #f9fafb;
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transactions-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction-type {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.transaction-type.paid {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.transaction-type.unpaid {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.transaction-amount {
+  font-weight: 500;
+}
+
+.empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: #6b7280;
+} 

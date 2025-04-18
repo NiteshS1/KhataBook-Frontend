@@ -1,0 +1,39 @@
+@import './assets/styles/global.css';
+
+/* React Toastify styles */
+.Toastify__toast {
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.Toastify__toast--success {
+  background-color: var(--success-color);
+}
+
+.Toastify__toast--error {
+  background-color: var(--danger-color);
+}
+
+.Toastify__toast--warning {
+  background-color: var(--warning-color);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-color);
+}
