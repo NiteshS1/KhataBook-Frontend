@@ -17,6 +17,10 @@ const API_CONFIG = {
     BASE: import.meta.env.VITE_API_TRANSACTIONS_URL,
     BY_ID: (id) => `${import.meta.env.VITE_API_TRANSACTIONS_URL}/${id}`,
   },
+  ORDERS: {
+    BASE: `${import.meta.env.VITE_API_BASE_URL}/api/orders`,
+    ALL: `${import.meta.env.VITE_API_BASE_URL}/api/orders`,
+  },
   DASHBOARD: `${import.meta.env.VITE_API_BASE_URL}/dashboard`,
 };
 

@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard';
 import Stocks from './pages/Stocks';
 import Transactions from './pages/Transactions';
 import Profile from './pages/Profile';
+import Billing from './components/Billing';
+import BillingHistory from './components/BillingHistory';
 import './assets/styles/global.css';
 
 const AppRoutes = () => {
@@ -52,6 +54,22 @@ const AppRoutes = () => {
         element={
           <PrivateRoute>
             <Profile />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/billing"
+        element={
+          <PrivateRoute>
+            <Billing />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/billing-history"
+        element={
+          <PrivateRoute>
+            <BillingHistory />
           </PrivateRoute>
         }
       />
